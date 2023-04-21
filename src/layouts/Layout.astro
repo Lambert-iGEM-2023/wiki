@@ -1,9 +1,11 @@
 ---
+import NavButton from '../components/NavButton.tsx';
 export interface Props {
 	title: string;
 }
 
 const { title } = Astro.props;
+const { openNavBar } = false;
 ---
 
 <!DOCTYPE html>
@@ -19,7 +21,15 @@ const { title } = Astro.props;
 		<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 		<title>{title}</title>
 	</head>
-	<body>
+	<body class="m-8 mx-10">
+		<div class="flex justify-between">
+			<span class="font-serif">Lambert_GA</span>
+			
+			<NavButton isOpen={openNavBar} client:load/>
+
+			<span>{openNavBar} aagrea</span>
+
+		</div>
 		<slot />
 	</body>
 </html>
