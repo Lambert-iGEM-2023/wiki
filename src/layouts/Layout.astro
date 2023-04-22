@@ -1,5 +1,5 @@
 ---
-import NavButton from '../components/NavButton.tsx';
+import Layout from './Layout'
 export interface Props {
 	title: string;
 }
@@ -21,17 +21,9 @@ const { openNavBar } = false;
 		<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 		<title>{title}</title>
 	</head>
-	<body class="m-8 mx-10">
-		<div class="flex justify-between">
-			<span class="font-serif">Lambert_GA</span>
-			
-			<NavButton isOpen={openNavBar} client:load/>
-
-			<span>{openNavBar} aagrea</span>
-
-		</div>
+	<Layout client:load>
 		<slot />
-	</body>
+	</Layout>
 </html>
 <style is:global>
 	:root {
