@@ -1,13 +1,8 @@
 ---
-import Layout from './Layout'
-export interface Props {
-	title: string;
-}
-
-const { title } = Astro.props;
-const { openNavBar } = false;
+import type Card from '../components/Card.astro';
+import Layout from './PageLayoutComp'
+const {frontmatter} = Astro.props;
 ---
-
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -19,13 +14,18 @@ const { openNavBar } = false;
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,400;0,600;1,400;1,700&display=swap" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
-		<title>{title}</title>
+		<title>{frontmatter.title}</title>
 	</head>
-	<Layout client:load>
-		<slot />
+	<Layout client:load {...frontmatter}>
+		<slot class=""/>
 	</Layout>
 </html>
 <style is:global>
+	/* h1 {
+		font-family: 'Playfair Display', serif;
+		font-weight: 700;
+		font-size: 2.5rem;
+	} */
 	:root {
 		--accent: 124, 58, 237;
 		--accent-gradient: linear-gradient(45deg, rgb(var(--accent)), #da62c4 30%, white 60%);
