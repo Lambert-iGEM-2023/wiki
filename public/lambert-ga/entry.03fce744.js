@@ -1,4 +1,4 @@
-import{r as o}from"./index.03be2d59.js";import{j as s,P as a,N as l}from"./ProgressBar.9bd4c6b2.js";const n=`
+import{r as o}from"./chunks/chunk.03be2d59.js";import{j as s,P as a,N as l}from"./chunks/chunk.c58b5067.js";const n=`
 prose max-w-3xl
 prose-h1:font-serif prose-h1:text-4xl
 prose-h2:font-sans prose-h2:text-2xl

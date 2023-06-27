@@ -11,6 +11,7 @@ export default defineConfig({
   site: 'https://2023.igem.wiki/lambert-ga',
   outDir: './public',
   publicDir: './static',
+  
   server: {
     tailwindConfig: './tailwind.config.js',
   },
@@ -20,7 +21,7 @@ export default defineConfig({
         output: {
           entryFileNames: 'lambert-ga/entry.[hash].js',
           chunkFileNames: 'lambert-ga/chunks/chunk.[hash].js',
-          assetFileNames: 'lambert-ga/assets/asset.[hash][extname]',
+          assetFileNames: 'lambert-ga/_astro/[name].[hash][extname]',
         },
       },
     },
