@@ -1,8 +1,9 @@
 import { defineConfig } from 'astro/config';
 import react from "@astrojs/react";
 import tailwind from "@astrojs/tailwind";
-
 import mdx from "@astrojs/mdx";
+
+import node from "@astrojs/node";
 
 // https://astro.build/config
 export default defineConfig({
@@ -12,6 +13,10 @@ export default defineConfig({
   outDir: './public',
   publicDir: './static',
   server: {
-    tailwindConfig: './tailwind.config.js',
+    tailwindConfig: './tailwind.config.js'
   },
+  output: "server",
+  adapter: node({
+    mode: "standalone"
+  })
 });
