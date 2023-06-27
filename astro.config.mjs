@@ -8,7 +8,7 @@ import mdx from "@astrojs/mdx";
 export default defineConfig({
   integrations: [react(), tailwind(), mdx()],
   sitemap: true,
-  site: 'https://2023.igem.wiki/lambert-ga',
+  site: 'https://2023.igem.wiki/',
   outDir: './public',
   publicDir: './static',
   
@@ -19,8 +19,8 @@ export default defineConfig({
     build: {
       rollupOptions: {
         output: {
-          entryFileNames: 'lambert-ga/entry.[hash].js',
-          chunkFileNames: 'lambert-ga/chunks/chunk.[hash].js',
+          entryFileNames: 'lambert-ga/_astro/[name].[hash][extname]',
+          chunkFileNames: 'lambert-ga/_astro/[name].[hash][extname]',
           assetFileNames: 'lambert-ga/_astro/[name].[hash][extname]',
         },
       },
