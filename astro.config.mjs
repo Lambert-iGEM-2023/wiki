@@ -9,7 +9,6 @@ export default defineConfig({
   integrations: [react(), tailwind(), mdx()],
   sitemap: true,
   site: 'https://2023.igem.wiki/lambert-ga',
-  pages: './src/pages',
   outDir: './public',
   publicDir: './static',
   devOptions: {
