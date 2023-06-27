@@ -1,12 +1,22 @@
-image: python:3.6
+# The Docker image that will be used to build your app
+image: node:lts
 
 pages:
-  stage: build
+  cache:
+    paths:
+      - node_modules/
   script:
-  - pip install --no-cache-dir -r dependencies.txt
-  - FLASK_APP=app.py flask freeze
+    # Specify the steps involved to build your app here
+    - npm install
+    - npm run build
+
   artifacts:
     paths:
-    - public
+      # The folder that contains the built files to be published.
+      # This must be called "public".
+      - public
+
   only:
-  - main
+    # Trigger a new build and deploy only when there is a push to the
+    # branch(es) below
+    - main
