@@ -11,7 +11,7 @@ export default defineConfig({
   site: 'https://2023.igem.wiki/lambert-ga',
   outDir: './public',
   publicDir: './static',
-  devOptions: {
+  server: {
     tailwindConfig: './tailwind.config.js',
   },
 });
