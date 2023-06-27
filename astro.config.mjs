@@ -19,8 +19,6 @@ export default defineConfig({
     build: {
       rollupOptions: {
         output: {
-          entryFileNames: 'lambert-ga/_astro/[name].[hash][extname]',
-          chunkFileNames: 'lambert-ga/_astro/[name].[hash][extname]',
           assetFileNames: 'lambert-ga/_astro/[name].[hash][extname]',
         },
       },
