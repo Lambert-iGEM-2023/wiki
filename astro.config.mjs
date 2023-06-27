@@ -14,4 +14,15 @@ export default defineConfig({
   server: {
     tailwindConfig: './tailwind.config.js',
   },
+  vite: {
+    build: {
+      rollupOptions: {
+        output: {
+          entryFileNames: 'lambert-ga/entry.[hash].js',
+          chunkFileNames: 'lambert-ga/chunks/chunk.[hash].js',
+          assetFileNames: 'lambert-ga/assets/asset.[hash][extname]',
+        },
+      },
+    },
+  },
 });
