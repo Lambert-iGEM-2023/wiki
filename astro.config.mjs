@@ -8,7 +8,11 @@ import mdx from "@astrojs/mdx";
 export default defineConfig({
   integrations: [react(), tailwind(), mdx()],
   sitemap: true,
-  site: 'https://2023.igem.wiki/lambert-ga/',
-  outDir: 'public',
-  publicDir: 'static',
+  site: 'https://2023.igem.wiki/lambert-ga',
+  pages: './src/pages',
+  outDir: './public',
+  publicDir: './static',
+  devOptions: {
+    tailwindConfig: './tailwind.config.js',
+  },
 });
