@@ -1,66 +1,55 @@
-# Team Lambert-GA 2023 Wiki
+# Astro Starter Kit: Basics
 
-This repository **MUST** contain all coding assets to generate your team's wiki (HTML, CSS, JavaScript, TypeScript, Python, etc).
-
-Images, photos, icons and fonts **MUST** be stored on `static.igem.wiki` using [uploads.igem.org](https://uploads.igem.org), and Videos **must** be embedded from [iGEM Video Universe](https://video.igem.org).
-
-For up-to-date requirements, resources, help and guidance, visit [competition.igem.org/deliverables/team-wiki](https://competition.igem.org/deliverables/team-wiki).
-
-## Getting started
-
-You should probably only edit the files inside folders `static`, `wiki` and `wiki > pages`.
-1. Open the Web IDE
-1. Make the changes on the files you wish:
-    * For the menu, change the file [menu.html](wiki/menu.html)
-    * For the layout, change the file [layout.html](wiki/layout.html)
-    * For the pages, change the corresponding file in the foler [pages](wiki/pages)
-1. Review the changes you made
-1. Once you are done, save the changes by **committing** them to the *main branch* of the repository
-1. An automated script will build, test and deploy your wiki, which should take less than 30 seconds.
-
-## About this Template
-
-### Files
-
-The static assets are in the `static` directory. The layout and templates are in the `wiki` directory, and the pages live in the `wiki > pages` directory. Unless you are an experienced and/or adventurous human, you probably shouldn't change other files.
-
-    |__ static/             -> static assets (CSS and JavaScript files only)
-    |__ wiki/               -> Main directory for the pages and layouts
-        |__ footer.html     -> Footer that will appear in all the pages
-        |__ layout.html     -> Main layout of your wiki. All the pages will follow its structure
-        |__ menu.html       -> Menu that will appear in all the pages
-        |__ pages/          -> Directory for all the pages
-            |__ *.html      -> Actual pages of your wiki
-    |__ .gitignore          -> Tells GitLab which files/directories should not be uploaded to the repository
-    |__ .gitlab-ci.yml      -> Automated flow for building, testing and deploying your website.
-    |__ LICENSE             -> License CC-by-4.0, all wikis are required to have this license - DO NOT MODIFY
-    |__ README.md           -> File containing the text you are reading right now
-    |__ app.py              -> Python code managing your wiki
-    |__ dependencies.txt    -> Software dependencies from the Python code
-
-### Technologies
-
-  * [GitLab Pages](https://docs.gitlab.com/ee/user/project/pages/)
-  * [Python](https://www.python.org): Programming language
-  * [Flask](https://palletsprojects.com/p/flask/): Python framework
-  * [Fronzen-Flask](https://pythonhosted.org/Frozen-Flask): Library that builds the wiki to be deployed as a static website
-  * [Bootstrap](https://getbootstrap.com/docs/5.0/components): CSS and JS components used
-
-### Building locally (advanced users)
-
-To work locally with this project, follow the steps below:
-
-#### Install
-```bash
-git clone https://gitlab.igem.org/2023/lambert-ga.git
-cd lambert-ga
-python3 -m venv venv
-. venv/bin/activate # on Linux, MacOS; or
-. venv\Scripts\activate # on Windows
-pip install -r dependencies.txt
+```
+npm create astro@latest -- --template basics
 ```
 
-#### Execute
-```bash
-python app.py
+[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
+[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+
+> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+
+![basics](https://user-images.githubusercontent.com/4677417/186188965-73453154-fdec-4d6b-9c34-cb35c248ae5b.png)
+
+
+## 🚀 Project Structure
+
+Inside of your Astro project, you'll see the following folders and files:
+
 ```
+/
+├── public/
+│   └── favicon.svg
+├── src/
+│   ├── components/
+│   │   └── Card.astro
+│   ├── layouts/
+│   │   └── Layout.astro
+│   └── pages/
+│       └── index.astro
+└── package.json
+```
+
+Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+
+There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+
+Any static assets, like images, can be placed in the `public/` directory.
+
+## 🧞 Commands
+
+All commands are run from the root of the project, from a terminal:
+
+| Command                | Action                                           |
+| :--------------------- | :----------------------------------------------- |
+| `npm install`          | Installs dependencies                            |
+| `npm run dev`          | Starts local dev server at `localhost:3000`      |
+| `npm run build`        | Build your production site to `./dist/`          |
+| `npm run preview`      | Preview your build locally, before deploying     |
+| `npm run astro ...`    | Run CLI commands like `astro add`, `astro check` |
+| `npm run astro --help` | Get help using the Astro CLI                     |
+
+## 👀 Want to learn more?
+
+Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
