@@ -1,5 +1,5 @@
 ---
-import Layout from './HomeLayoutComp'
+import Nav from '../components/Nav';
 export interface Props {
 	title: string;
 }
@@ -21,9 +21,16 @@ const { title } = Astro.props;
 		<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 		<title>{title}</title>
 	</head>
-	<Layout client:load>
-		<slot />
-	</Layout>
+	<div class="w-full flex justify-center">
+		<div class="w-full max-w-5xl mx-16 mt-8">
+			<Nav />
+
+			<div class="mt-8">
+				<slot />
+			</div>
+		</div>
+	</div>
+
 </html>
 <style is:global>
 	:root {
