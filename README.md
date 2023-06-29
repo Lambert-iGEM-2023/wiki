@@ -2,7 +2,7 @@
 
 Welcome to the Lambert iGEM 2023 Wiki! If you're not a member of the wiki committee, all edits should be made from the wiki editor. A few important things to note though:
 
-- when using `href` or any links, the path to any links should be in the format of `lambert-ga/page`. Including `lambert-ga` is essential for links to work properly.
+- when using `href` or any links, the path to any links should be in the format of `/lambert-ga/page`. Including `lambert-ga` is essential for links to work properly.
 
 ## Technology stack
 
